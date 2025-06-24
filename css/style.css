@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+}
+.container {
+   max-width: fit-content;
+   padding-bottom: 150px;
+}
+.container > :nth-child(even){
+    background-color: rgba(255, 127, 238, 0.182);
+    border-radius: 20px;
+}
+.container > div:nth-child(odd){
+    background-color: rgba(174, 104, 255, 0.242);
+    border-radius: 20px;
+}
+.container > div {
+    margin: 20px 0;
+}
+.container > header, .container > div{
+    padding: 20px 25px;
+}
+header {
+    text-align: center;
+    padding-top: 40px;
+}
+h1 {
+    margin: 10px;
+}
+p {
+    margin: 0;
+    font-size: 1em;
+    color:rgba(118, 118, 118, 0.803);
+    font-style: italic;
+}
+.bold {
+    font-size: larger;
+    font-weight: bold;
+}
+.num-input {
+    width: 60px;
+    height: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    color:rgba(107, 0, 156, 0.603);
+    border: solid;
+    border-radius: 4px;
+}
+.range-input {
+    cursor: pointer;
+    border-radius: 4px;
+    width: 330px;
+    height: 7px;
+    margin-top: 20px;
+}
+.items-container {
+    display: flex;
+}
+.item-container {
+    display: flex;
+}
+.item-container > label {
+    margin: 10px 0 10px 15px;
+    line-height: 25px;
+}
+.item-container > div > label > p {
+    color:rgba(118, 118, 118, 0.536)
+}
+.rooms-qty-container > .items-container > .item-container {
+    width: fit-content;
+    margin: 5px;
+}
+.rooms-qty-container > .items-container > .item-container > label {
+    margin: 0;
+}
+.rooms-qty-container > .items-container > .item-container > label > div {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(109, 50, 177, 0.192);
+    border-radius: 4px;
+    box-shadow: 2px 5px 8px rgba(50, 23, 81, 0.474);
+    cursor: pointer;
+}
+.rooms-qty-container > .items-container > .item-container > label > div:hover {
+    background-color: rgba(109, 50, 177, 0.085);
+}
+.rooms-qty-container > .items-container > .item-container > label > div:checked {
+    background-color: rgba(157, 75, 250, 0.821);
+}
+.rooms-qty {
+    display: none;
+}
+#total-price-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0px;
+    background-color: #fff;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color:rgba(0, 0, 0, 0.418);
+}
+.total-price {
+    color:rgb(255, 0, 217)
+}

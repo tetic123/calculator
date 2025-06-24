@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!----------------------header------------------>
+        <header class="header">
+            <h1>Расчет стоимости ремонта</h1>
+            <p>Базовая цена: 1 м² = 6 тыс. рублей</p>
+        </header>
+
+        <!----------------------square------------------>
+        <div class="square-container">
+            <div class="num-input-container">
+                <label for="num-input" class="num-label bold">Площадь квартиры:
+                    <input type="number" class="num-input" min="0" max="200" value="50"> м²
+                </label>
+            </div>
+            <div class="range-input-container">
+                <input type="range" class="range-input" min="0" max="200" value="50">
+            </div>
+        </div>
+
+        <!-----------------------type repair------------------>
+        <div class="type-repair-container list">
+            <h2 class="bold">Тип ремонта</h2>
+            <div class="item-container">
+                <input type="radio" id="type-repair-1" name="type-repair-radio" class="type-repair" value="1" checked> 
+                <label for="type-repair-1">Косметический
+                </label>
+            </div>
+            <div class="item-container">
+                <input type="radio" id="type-repair-2" name="type-repair-radio" class="type-repair" value="1.2"> 
+                <label for="type-repair-2">Капитальный
+                    <p>+30% к стоимости</p>
+                </label>
+            </div>
+            <div class="item-container">
+                <input type="radio" id="type-repair-3" name="type-repair-radio" class="type-repair" value="1.4">
+                <label for="type-repair-3">Под ключ
+                    <p>+50% к стоимости</p>
+                </label>
+            </div>
+        </div>
+
+        <!-----------------------type house------------------>
+        <div class="type-house-container list">
+            <h2 class="bold">Тип дома</h2>
+            <div class="item-container">
+                <input type="radio" id="type-house-1" name="type-house-radio" class="type-house" value="1" checked> 
+                <label for="type-house-1">Новострой
+                </label>
+            </div>
+            <div class="item-container">
+                <input type="radio" id="type-house-2" name="type-house-radio" class="type-house" value="1.2"> 
+                <label for="type-house-2">Вторичка
+                    <p>+10% к стоимости</p>
+                </label>
+            </div>
+        </div>
+
+        <!--------------------------rooms------------------>
+        <div class="rooms-qty-container list">
+            <h2 class="bold">Количество комнат</h2>
+            <div class="items-container">
+                <div class="item-container">
+                    <input type="radio" id="rooms-qty-1" name="rooms-qty" class="rooms-qty" value="0.8"> 
+                    <label for="rooms-qty-1">
+                        <div>
+                            C
+                        </div>
+                    </label>
+                </div>
+                <div class="item-container">
+                    <input type="radio" id="rooms-qty-2" name="rooms-qty" class="rooms-qty" value="1" checked> 
+                    <label for="rooms-qty-2">
+                        <div>
+                            1
+                        </div>
+                    </label>
+                </div>
+                <div class="item-container">
+                    <input type="radio" id="rooms-qty-3" name="rooms-qty" class="rooms-qty" value="1.2"> 
+                    <label for="rooms-qty-3">
+                        <div>
+                            2
+                        </div>
+                    </label>
+                </div>
+                <div class="item-container">
+                    <input type="radio" id="rooms-qty-4" name="rooms-qty" class="rooms-qty" value="1.3"> 
+                    <label for="rooms-qty-4">
+                        <div>
+                            3
+                        </div>
+                    </label>
+                </div>
+                <div class="item-container">
+                    <input type="radio" id="rooms-qty-5" name="rooms-qty" class="rooms-qty" value="1.4"> 
+                    <label for="rooms-qty-5">
+                        <div>
+                            4
+                        </div>
+                    </label>
+                </div>
+                <div class="item-container">
+                    <input type="radio" id="rooms-qty-6" name="rooms-qty" class="rooms-qty" value="1.5"> 
+                    <label for="rooms-qty-6">
+                        <div>
+                            5
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!----------------------adds------------------>
+        <div class="adds-container list">
+            <h2 class="bold">Дополнительные услуги</h2>
+            <div class="item-container">
+                <input type="checkbox" id="adds-1" name="adds" class="adds" value="1.1"> 
+                <label for="adds-1">Натяжные потолки
+                    <p>+10% к стоимости</p>
+                </label>
+            </div>
+            <div class="item-container">
+                <input type="checkbox" id="adds-2" name="adds" class="adds" value="1.15"> 
+                <label for="adds-2">Покраска стен
+                    <p>+15% к стоимости</p>
+                </label>
+            </div>
+            <div class="item-container">
+                <input type="checkbox" id="adds-3" name="adds" class="adds" value="1.1"> 
+                <label for="adds-3">Теплый пол
+                    <p>+10% к стоимости</p>
+                </label>
+            </div>
+        </div>
+
+        <!----------------------adds------------------>
+
+        <div id="total-price-container">
+            <h1>Итого:</h1>
+            <h1 class="total-price">0</h1>
+        </div>
+
+
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
